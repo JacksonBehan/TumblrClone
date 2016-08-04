@@ -13,6 +13,12 @@
   <body>
     <div id="sidebar">
 
+      <% if user_signed_in? %>
+        <div class="welcome">
+          Welcome, <%= current_user.email %>
+        </div>
+      <% end %>
+
       <ul>
         <li class="category"><%= link_to 'Tumblr', root_path %></li>
         <li><%= link_to 'Posts', root_path %></li>
